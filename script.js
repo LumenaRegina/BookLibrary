@@ -53,7 +53,7 @@ function createCard(author, title, pages, year, isRead, UUID) {
   svg.setAttribute("class", "bookIcon");
 
   const use = document.createElementNS("http://www.w3.org/2000/svg", "use");
-  use.setAttribute("href", "/icons/book.svg");
+  use.setAttribute("href", "icons/book.svg");
 
   const readSpan = document.createElement("span");
   readSpan.className = "isRead";
@@ -73,7 +73,7 @@ function createCard(author, title, pages, year, isRead, UUID) {
   svg2.setAttribute("class", "deleteIcon");
 
   const use2 = document.createElementNS("http://www.w3.org/2000/svg", "use");
-  use2.setAttribute("href", "/icons/delete.svg");
+  use2.setAttribute("href", "icons/delete.svg");
   svg2.appendChild(use2);
   deleteBtn.appendChild(svg2);
 
