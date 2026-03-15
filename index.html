@@ -14,52 +14,13 @@
       <h1>Your Library</h1>
     </header>
     <main class="librarysection">
-      <div class="card">
-        <svg class="bookIcon"><use href="/icons/book.svg" /></svg>
-        <span class="Title">Lorem Ipsum</span>
-        <span class="Author"><em>by </em>Max Mustermann</span>
-        <span class="Year"><em>Published in: </em>2020</span>
-        <span class="PageCount"><em>Pages: </em>123</span>
-        <span class="isRead"><em>Read:</em></span>
-      </div>
-      <div class="card">
-        <svg class="bookIcon"><use href="/icons/book.svg" /></svg>
-        <span class="Title">Lorem Ipsum</span>
-        <span class="Author"><em>by </em>Max Mustermann</span>
-        <span class="Year"><em>Published in: </em>2020</span>
-        <span class="PageCount"><em>Pages: </em>123</span>
-        <span class="isRead"><em>Read:</em></span>
-      </div>
-      <div class="card">
-        <svg class="bookIcon"><use href="/icons/book.svg" /></svg>
-        <span class="Title">Lorem Ipsum</span>
-        <span class="Author"><em>by </em>Max Mustermann</span>
-        <span class="Year"><em>Published in: </em>2020</span>
-        <span class="PageCount"><em>Pages: </em>123</span>
-        <span class="isRead"><em>Read:</em></span>
-      </div>
-      <div class="card">
-        <svg class="bookIcon"><use href="/icons/book.svg" /></svg>
-        <span class="Title">Lorem Ipsum</span>
-        <span class="Author"><em>by </em>Max Mustermann</span>
-        <span class="Year"><em>Published in: </em>2020</span>
-        <span class="PageCount"><em>Pages: </em>123</span>
-        <span class="isRead"><em>Read:</em></span>
-      </div>
-      <div class="card">
-        <svg class="bookIcon"><use href="/icons/book.svg" /></svg>
-        <span class="Title">Lorem Ipsum</span>
-        <span class="Author"><em>by </em>Max Mustermann</span>
-        <span class="Year"><em>Published in: </em>2020</span>
-        <span class="PageCount"><em>Pages: </em>123</span>
-        <span class="isRead"><em>Read:</em></span>
-      </div>
+      It's empty here... Add your first book!
     </main>
     <button class="addBook" command="show-modal" commandfor="addBookModal">
       <svg class="addBookIcon"><use href="icons/library_add.svg" /></svg>
     </button>
     <dialog id="addBookModal">
-      <form>
+      <form id="bookentry">
         <fieldset>
           <div class="wrapper">
             <legend>Enter book details</legend>
@@ -72,12 +33,15 @@
             <label for="bookPages">Page count </label>
             <input type="tel" name="bookPages" id="bookPages" />
             <label for="bookIsRead">Mark as read </label>
-            <input type="checkbox" name="bookIsRead" id="bookIsRead" />
+            <input type="checkbox" name="bookIsRead" value="true" id="bookIsRead" />
           </div>
         </fieldset>
       </form>
-      <button command="close" commandfor="addBookModal">Add to library</button>
-    </dialog>
+      <div class="btnContainer">
+        <button class="modalBtn"command="close" commandfor="addBookModal">Add to library</button>
+        <button class="cancel" command="close" commandfor="addBookModal">Cancel</button>
+            </dialog>
+      </div>
   </body>
   <script src="script.js"></script>
 </html>

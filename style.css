@@ -73,6 +73,7 @@ button {
   padding: 16px;
   filter: drop-shadow(3px 3px 3px grey);
   background-color: royalblue;
+  flex: auto;
 
 }
 button:hover{
@@ -84,6 +85,11 @@ button:hover{
   fill: white;
   height: 28px;
   width: 28px;
+}
+.deleteIcon {
+  fill: white;
+  height: 20px;
+  width: 20px;
 }
 
 
@@ -134,4 +140,56 @@ fieldset input{
 
 dialog::backdrop{
   backdrop-filter: blur(5px) brightness(0.65);
+}
+
+dialog:not([open]) {
+  display: none;
+}
+
+.btnContainer{
+  display: flex;
+  justify-content: space-between;
+  flex: auto;
+}
+
+.cancel {
+  background-color: crimson;
+  width: min-content;
+  flex: none;
+  margin-left: 24px;
+}
+
+.isReadStatus {
+  padding: 3px 10px;
+  display: inline-block;
+  flex: none;
+  filter: none;
+  margin-left: 4px;
+}
+
+.read {
+  background-color: green;
+}
+
+.unread {
+  background-color: crimson;
+}
+
+id {
+  display: none;
+}
+
+.delete {
+  background-color: crimson;
+  display: inline-block;
+  padding: 2px;
+  filter: none;
+  margin-left: auto;
+  flex: none;
+}
+
+
+.isRead {
+  display: flex;
+  align-items: center;
 }
